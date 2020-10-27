@@ -3,9 +3,9 @@ require('dotenv').config()
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end('{message:"'+ process.env.MESSAGE || "Hello world" +'"}');
+    res.end(JSON.stringify({ message: process.env.MESSAGE }));
 });
 
 server.listen(process.env.PORT);
 
-console.log("The app is listening on port "+ process.env.PORT)
+console.log("The app is listening on port " + process.env.PORT)
