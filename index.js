@@ -3,7 +3,7 @@ require('dotenv').config()
 
 const server = http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end('{message:"'+ process.env.MESSAGE || "Hello world" +''"}');
+    res.end('{message:"'+ process.env.MESSAGE || "Hello world" +'"}');
 });
 
 server.listen(process.env.PORT);
