@@ -6,6 +6,6 @@ const server = http.createServer((req, res) => {
     res.end(JSON.stringify({ message: process.env.MESSAGE }));
 });
 
-server.listen(process.env.PORT);
+server.listen(process.env.PORT || 3000);
 
-console.log("The app is listening on port " + process.env.PORT || 3000)
+console.log("The app is listening on port " + (process.env.PORT || 3000))
